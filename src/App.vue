@@ -1,17 +1,23 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/ress@4.0.0/dist/ress.min.css"
+  />
+  <Header />
+  <TopPage />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from "./components/Header.vue";
+import TopPage from "./components/toppage/TopContents.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    Header,
+    TopPage,
+  },
+};
 </script>
 
 <style>
@@ -21,6 +27,14 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 20px;
+}
+
+@media screen and (min-width: 1200px) {
+  #app {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 </style>
