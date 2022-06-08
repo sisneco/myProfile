@@ -1,10 +1,14 @@
 <template>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap"
+    rel="stylesheet"
+  />
   <div id="header">
     <nav id="navMenu">
-      <span>About</span>
+      <span>My Profile Site</span>
       <ul>
         <li>
-          <a href="">About</a>
+          <a :class="{ current: currentPage === 'About' }">About</a>
         </li>
         <li>
           <a href="">Riding Bycycle</a>
@@ -27,7 +31,9 @@
 export default {
   name: "HelloWorld",
   data() {
-    return {};
+    return {
+      currentPage: "About",
+    };
   },
 };
 </script>
@@ -35,6 +41,7 @@ export default {
 <style scoped>
 #navMenu {
   position: relative;
+  padding-bottom: px;
   border-bottom: 1px solid #ccc;
 }
 
@@ -43,15 +50,16 @@ export default {
   position: absolute;
   top: 0;
   left: 0;
-  margin-left: 1.5em;
-  font-size: 30px;
-  color: #aaa;
+  margin-left: 2em;
+  margin-bottom: 1em;
+  font-size: 28px;
+  font-family: "Fredoka One", cursive;
+  color: #24140e;
 }
 
 #navMenu ul {
   display: table;
   margin: 0 0 0 auto;
-  padding: 0;
   width: 70%;
   text-align: center;
 }
@@ -61,18 +69,50 @@ export default {
   padding-left: 5px;
   padding-right: 7px;
   border-right: 1px solid #ccc;
-  padding-bottom: 5px;
+  padding-top: 5px;
+  padding-bottom: 10px;
 }
 #navMenu ul li:first-child {
   border-left: 1px solid #ccc;
 }
+
 #navMenu ul li a {
   display: block;
   width: 100%;
-  padding: 7px 0;
   text-decoration: none;
   color: #aaa;
+  position: relative;
+  padding: 5px 0;
 }
+
+#navMenu li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  /*アニメーションの指定*/
+  background: yellow;
+  transform: scale(0, 1); /*X方向0、Y方向1*/
+  transform-origin: center top; /*上部中央基点*/
+}
+
+#navMenu li a:hover {
+  color: #ffff9e;
+}
+
+#navMenu .current {
+  pointer-events: none;
+  color: #ea5532;
+  font-weight: bold;
+}
+
+#navMenu li a:hover::after {
+  transition: all 0.8s;
+  transform: scale(1, 0); /*X方向にスケール拡大*/
+}
+
 #navMenu ul li a:hover {
   padding-bottom: 5px;
 }

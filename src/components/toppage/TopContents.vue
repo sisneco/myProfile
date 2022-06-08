@@ -136,12 +136,13 @@ export default {
   color: #aaa;
   list-style: none;
   font-size: 1.5em;
-  margin-right: 2em;
-  padding: 0 1em;
+  margin-right: 1em;
   border-radius: 1vh;
 }
 
 #sns li a {
+  padding: 0 1em;
+  display: block;
   text-decoration: none;
   color: #fff;
 }

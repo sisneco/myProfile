@@ -3,8 +3,10 @@
     rel="stylesheet"
     href="https://unpkg.com/ress@4.0.0/dist/ress.min.css"
   />
-  <Header />
-  <TopPage />
+  <div class="zoom-in">
+    <Header />
+    <TopPage />
+  </div>
 </template>
 
 <script>
@@ -26,8 +28,23 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
   margin-top: 20px;
+}
+
+.zoom-in {
+  animation-name: zoomInAnime;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes zoomInAnime {
+  from {
+    transform: scale(0.6);
+  }
+
+  to {
+    transform: scale(1);
+  }
 }
 
 @media screen and (min-width: 1200px) {
