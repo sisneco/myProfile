@@ -6,12 +6,13 @@ import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faStrava } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import router from './router'
 
 library.add(faTwitter);
 library.add(faInstagram);
 library.add(faStrava);
 
-const app = createApp(App);
+const app = createApp(App).use(router);
 app.component("FontFa", FontAwesomeIcon);
 
 app.mount("#app");

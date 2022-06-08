@@ -8,10 +8,16 @@
       <span>My Profile Site</span>
       <ul>
         <li>
-          <a :class="{ current: currentPage === 'About' }">About</a>
+          <router-link to="/" :class="{ current: currentPage === 'about' }"
+            >About</router-link
+          >
         </li>
         <li>
-          <a href="">Riding Bycycle</a>
+          <router-link
+            to="/RidingBycycle"
+            :class="{ current: currentPage === 'ridingbycycle' }"
+            >Riding Bycycle</router-link
+          >
         </li>
         <li>
           <a href="">Plaing Music</a>
@@ -30,10 +36,11 @@
 <script>
 export default {
   name: "HelloWorld",
+  props: {
+    currentPage: String,
+  },
   data() {
-    return {
-      currentPage: "About",
-    };
+    return {};
   },
 };
 </script>
