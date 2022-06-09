@@ -1,15 +1,31 @@
 <template>
-  <router-view />
+  <Header />
+  <div class="wrapper">
+    <router-view />
+  </div>
 </template>
 
 <script>
+import Header from "@/components/Header.vue";
+
 export default {
   name: "App",
-  components: {},
+  components: {
+    Header,
+  },
+  mounted() {
+    console.log(this.$);
+  },
 };
 </script>
 
 <style>
+body {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background: #fffdf9;
+}
+
 .clear-fix::after {
   content: "";
   display: block;

@@ -1,5 +1,5 @@
 <template>
-  <img id="top-img" src="https://placehold.jp/1000x250.png" />
+  <img id="top-img" src="https://placehold.jp/1200x300.png" />
   <div id="top-contents">
     <div class="clear-fix">
       <section id="profile" style="text-align: center">
@@ -15,13 +15,13 @@
       <section id="why-site" style="text-align: center">
         <h2>-Why Create This Site?-</h2>
         <ul>
-          <li>・高校でC++に触れたモノの、よく分からず挫折</li>
-          <li>・大学時代は組み込みの学科で,PythonやC言語を弄る日々</li>
+          <li>高校でC++に触れたモノの,よく分からず挫折</li>
+          <li>大学時代は組み込みの学科で,PythonやC言語を弄る日々</li>
           <li>
-            ・たまにUnityを触ってゲーム会社行くぞ～と思ってたが,気づいたらSESに
+            たまにUnityを触ってゲーム会社行くぞ～と思ってたが,気づいたらSESに
           </li>
           <li>
-            ・会社の研修で好き放題学習した結果,`JavaScript`と`Vue.js`に出会う
+            会社の研修で好き放題学習した結果,`JavaScript`と`Vue.js`に出会う
           </li>
           <li>
             ・せっかく学習したんだし,自己紹介サイトでも作ろう<span
@@ -59,7 +59,9 @@
 export default {
   name: "TopContents",
   data() {
-    return {};
+    return {
+      isFadeOut: false,
+    };
   },
 };
 </script>
@@ -118,6 +120,17 @@ export default {
   list-style: none;
   line-height: 1.6em;
   color: #404040;
+
+  display: flex;
+  align-items: center; /* 垂直中心 */
+}
+
+/* before左 after右 */
+#why-site li::before {
+  border-top: 1px solid;
+  content: "";
+  width: 1em; /* 線の長さ */
+  margin-right: 1em;
 }
 
 #why-site li:last-child {

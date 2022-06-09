@@ -1,14 +1,13 @@
 <template>
-  <RBContents />
+  <PMContents />
 </template>
 
 <script>
-import RBContents from "@/components/ridingbycycle/RBContents.vue";
-
+import PMContents from "@/components/playingmusic/PMContents.vue";
 export default {
-  name: "RidingBycycle",
+  name: "PlayingMusic",
   components: {
-    RBContents,
+    PMContents,
   },
   data() {
     return {};

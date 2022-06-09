@@ -8,25 +8,41 @@
       <span>My Profile Site</span>
       <ul>
         <li>
-          <router-link to="/" :class="{ current: currentPage === 'about' }"
-            >About</router-link
+          <router-link
+            to="/"
+            :class="{ current: currentPage === 'home' }"
+            @click="currentPage = 'home'"
+            >Introduce Me</router-link
           >
         </li>
+
         <li>
           <router-link
             to="/RidingBycycle"
             :class="{ current: currentPage === 'ridingbycycle' }"
+            @click="currentPage = 'ridingbycycle'"
             >Riding Bycycle</router-link
           >
         </li>
+
         <li>
-          <a href="">Plaing Music</a>
+          <router-link
+            to="/PlayingMusic"
+            @click="currentPage = 'playingmusic'"
+            :class="{ current: currentPage === 'playingmusic' }"
+            >Playing Music</router-link
+          >
         </li>
         <li>
           <a href="">Lisning Music</a>
         </li>
         <li>
-          <a href="">Taking Photo</a>
+          <router-link
+            to="/TakingPhoto"
+            @click="currentPage = 'takingphoto'"
+            :class="{ current: currentPage === 'takingphoto' }"
+            >Taking Photo</router-link
+          >
         </li>
       </ul>
     </nav>
@@ -36,19 +52,18 @@
 <script>
 export default {
   name: "HelloWorld",
-  props: {
-    currentPage: String,
-  },
   data() {
-    return {};
+    return {
+      currentPage: "",
+    };
   },
+  mounted() {},
 };
 </script>
 
 <style scoped>
 #navMenu {
   position: relative;
-  padding-bottom: px;
   border-bottom: 1px solid #ccc;
 }
 
@@ -100,19 +115,18 @@ export default {
   width: 100%;
   height: 2px;
   /*アニメーションの指定*/
-  background: yellow;
+  background: #a1d8e6;
   transform: scale(0, 1); /*X方向0、Y方向1*/
   transform-origin: center top; /*上部中央基点*/
 }
 
 #navMenu li a:hover {
-  color: #ffff9e;
+  color: #ffdc00;
 }
 
 #navMenu .current {
   pointer-events: none;
   color: #ea5532;
-  font-weight: bold;
 }
 
 #navMenu li a:hover::after {
