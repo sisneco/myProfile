@@ -13,9 +13,6 @@ export default {
   components: {
     Header,
   },
-  mounted() {
-    console.log(this.$);
-  },
 };
 </script>
 

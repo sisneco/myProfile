@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import RBContents from "@/components/ridingbycycle/RBContents.vue";
+import RBContents from "@/components/RBContents.vue";
 
 export default {
   name: "RidingBycycle",

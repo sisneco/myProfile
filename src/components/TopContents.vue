@@ -1,4 +1,8 @@
 <template>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Courgette&display=swap"
+    rel="stylesheet"
+  />
   <img id="top-img" src="https://placehold.jp/1200x300.png" />
   <div id="top-contents">
     <div class="clear-fix">
@@ -24,7 +28,7 @@
             会社の研修で好き放題学習した結果,`JavaScript`と`Vue.js`に出会う
           </li>
           <li>
-            ・せっかく学習したんだし,自己紹介サイトでも作ろう<span
+            せっかく学習したんだし,自己紹介サイトでも作ろう<span
               style="font-size: 12px"
               >←イマココ</span
             >
@@ -34,17 +38,17 @@
       <section id="sns" style="text-align: right">
         <ul>
           <li id="twitter">
-            <a href="#" target="brank">
+            <a href="https://twitter.com/?lang=ja" target="brank">
               Twitter <FontFa :icon="{ prefix: 'fab', iconName: 'twitter' }" />
             </a>
           </li>
           <li id="strava">
-            <a href="">
+            <a href="https://www.strava.com/login" target="brank">
               Strava <FontFa :icon="{ prefix: 'fab', iconName: 'strava' }" />
             </a>
           </li>
           <li id="instagram">
-            <a href="">
+            <a href="https://www.instagram.com/" target="brank">
               Instagram
               <FontFa :icon="{ prefix: 'fab', iconName: 'instagram' }" />
             </a>
@@ -154,6 +158,7 @@ export default {
 }
 
 #sns li a {
+  font-family: "Courgette", cursive;
   padding: 0 1em;
   display: block;
   text-decoration: none;

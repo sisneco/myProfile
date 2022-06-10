@@ -3,6 +3,7 @@
     href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap"
     rel="stylesheet"
   />
+
   <div id="header">
     <nav id="navMenu">
       <span>My Profile Site</span>
@@ -10,7 +11,7 @@
         <li>
           <router-link
             to="/"
-            :class="{ current: currentPage === 'home' }"
+            :class="{ current: this.$route.path === '/' }"
             @click="currentPage = 'home'"
             >Introduce Me</router-link
           >
@@ -19,8 +20,7 @@
         <li>
           <router-link
             to="/RidingBycycle"
-            :class="{ current: currentPage === 'ridingbycycle' }"
-            @click="currentPage = 'ridingbycycle'"
+            :class="{ current: this.$route.path === '/RidingBycycle' }"
             >Riding Bycycle</router-link
           >
         </li>
@@ -28,19 +28,21 @@
         <li>
           <router-link
             to="/PlayingMusic"
-            @click="currentPage = 'playingmusic'"
-            :class="{ current: currentPage === 'playingmusic' }"
+            :class="{ current: this.$route.path === '/PlayingMusic' }"
             >Playing Music</router-link
           >
         </li>
         <li>
-          <a href="">Lisning Music</a>
+          <router-link
+            to="/LisningMusic"
+            :class="{ current: this.$route.path === '/LisningMusic' }"
+            >Lisning Music</router-link
+          >
         </li>
         <li>
           <router-link
             to="/TakingPhoto"
-            @click="currentPage = 'takingphoto'"
-            :class="{ current: currentPage === 'takingphoto' }"
+            :class="{ current: this.$route.path === '/TakingPhoto' }"
             >Taking Photo</router-link
           >
         </li>
@@ -57,7 +59,6 @@ export default {
       currentPage: "",
     };
   },
-  mounted() {},
 };
 </script>
 

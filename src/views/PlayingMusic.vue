@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import PMContents from "@/components/playingmusic/PMContents.vue";
+import PMContents from "@/components/PMContents.vue";
 export default {
   name: "PlayingMusic",
   components: {
