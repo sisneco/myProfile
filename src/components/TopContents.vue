@@ -10,7 +10,7 @@
         <h2>-About-</h2>
         <img src="https://placehold.jp/100x100.png" />
         <h3>My Name(名前)</h3>
-        <span>Tatsuki Minami</span>
+        <span>sisneco(しすねこ)</span>
         <h3>Profession(職業)</h3>
         <span>プログラム書いてます.</span>
         <h3>出身地</h3>
